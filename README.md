@@ -11,17 +11,28 @@ npm run dev
 
 ## Publicar no GitHub Pages
 
-Este projeto já tem um workflow em `.github/workflows/deploy.yml`.
+O jeito mais simples é publicar a pasta `docs/`, que já contém o site compilado.
 
-Depois de subir o repositório no GitHub:
+No GitHub:
 
 1. Entre em `Settings`.
 2. Vá em `Pages`.
-3. Em `Build and deployment`, escolha `GitHub Actions`.
-4. Faça um push na branch `main`.
-5. Aguarde a action `Deploy GitHub Pages` terminar.
+3. Em `Build and deployment`, escolha `Deploy from a branch`.
+4. Em `Branch`, escolha `main`.
+5. Na pasta, escolha `/docs`.
+6. Clique em `Save`.
 
-O link público aparecerá na própria página `Settings > Pages`.
+O link público aparecerá em `Settings > Pages`.
+
+Sempre que alterar o projeto, rode:
+
+```bash
+npm install
+npm run build:pages
+git add .
+git commit -m "Atualiza site"
+git push
+```
 
 ## Abrir com Live Server
 
