@@ -887,7 +887,7 @@ export default function App() {
                 <input
                   value={sheet.name}
                   onChange={(event) => patchSheet({ name: event.target.value })}
-                  placeholder="Ex.: Kael de Mármore Negro"
+                  placeholder="Ex.: Fulano de Tal"
                 />
               </label>
               <label>
